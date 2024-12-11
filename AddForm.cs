@@ -9,9 +9,30 @@ namespace AccountingUnits
     {
         private string _connectionString;
         public int _currentUnitId;
-        public AddForm()
+        public AddForm(float fontSize)
         {
             InitializeComponent();
+            ChangeFontSizeInForm(this, fontSize);
+        }
+        public void ChangeFontSizeInForm(Control? parent, float newSize)
+        {
+            if (parent == null)
+            {
+                parent = this;
+            }
+            foreach (Control control in parent.Controls)
+            {
+                control.Font = new Font(control.Font.FontFamily, newSize, control.Font.Style);
+                if (control is Label || control is Button || control is CheckBox || control is ToolStripMenuItem || control is Panel)
+                {
+                    control.AutoSize = false;
+                }
+                if (control.HasChildren)
+                {
+                    ChangeFontSizeInForm(control, newSize);
+                }
+            }
+            this.Refresh();
         }
         public void SetConnectionString(string connectionString)
         {

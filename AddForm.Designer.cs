@@ -129,6 +129,8 @@
             Controls.Add(NameTextBox);
             Controls.Add(NameLabel);
             Controls.Add(TopPanel);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             MinimumSize = new Size(510, 304);
             Name = "AddForm";
             StartPosition = FormStartPosition.CenterScreen;
