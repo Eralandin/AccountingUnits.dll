@@ -52,11 +52,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Bahnschrift", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Font = new Font("Bahnschrift", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(12, 40);
             label1.Name = "label1";
-            label1.Size = new Size(318, 25);
+            label1.Size = new Size(409, 33);
             label1.TabIndex = 1;
             label1.Text = "Работа с единицами измерения";
             // 
